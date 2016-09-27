@@ -1,0 +1,116 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <div class="max-width-3 mx-auto">
+      <h1>Cheat Sheet</h1>
+
+      <h2>Useful links</h2>
+
+      <ul>
+      <li>Link to the <a href="slideshow.html">slides</a></li>
+      <li>
+        <a href="http://eloquentjavascript.net/code/">Sandbox</a>
+         to try out JavaScript <em>in the browser</em>
+      </li>
+      <li>
+        Link to free copy of Eloquent JavaScript <a href="http://eloquentjavascript.net/">book</a>
+      </li>
+      </ul>
+
+
+      <h2>Users and their passwords</h2>
+      <table border=0>
+      <tr><th>Name</th><th>Password</th></tr>
+      <tr><td>Alice</td><td>alasiforgot</td></tr>
+      <tr><td>Bob</td><td>mycatlikestuna</td></tr>
+      <tr><td>Charlie</td><td>topspin</td></tr>
+      <tr><td>Dazza</td><td>ilikevb</td></tr>
+      </table>
+
+
+    <h2>Types in JavaScript</h2>
+
+    <ul>
+      <li><em>Strings</em>  e.g. <tt>"hello"</tt></li>
+      <li><em>numbers</em>  e.g. <tt>123</tt>, <tt>1.23</tt></li>
+      <li><em>objects</em>  e.g. <tt>{ "alice": 100, bob: 50 }</tt></li>
+    </ul>
+
+    <h2>Objects</h2>
+
+    <p>Objects map <em>keys</em> to <em>values</em>.</p>
+
+    For example we can map users to amounts.
+
+    <pre>
+    var balances = { "alice": 100, "bob": 50 };
+    </pre>
+
+    Here the <em>keys</em> are strings and the values are <em>numbers</em>.
+
+    We can get the value of an object <em>at a particular key</em> by using
+    the <em>subscript</em> operator. e.g.
+
+    <pre>
+    // x is equal to 100 after this line
+    var x = balances["alice"];
+    </pre>
+
+    <p>The code <tt>balances["alice"]</tt> is pronounced "balances subscript alice".</p>
+
+
+    <h2>Arithmetic</h2>
+
+    <p>Adding 20 to a variable <tt>x</tt></p>
+
+    <p><tt>x += 20;</tt></p>
+
+    <p>Subtracting 10 from a "key" in an object</p>
+
+    <p><tt>balances["alice"] -= 10;</tt></p>
+
+    More examples:
+
+    <pre>
+    var balances;
+    var user;
+
+    balances = { "alice": 100, bob: 50 };
+    user = "bob";
+
+    // subtract 13 from bob's balance
+    balances[user] -= 13;
+
+    // add 17 to alice's balance
+    user ="alice";
+    balances[user] += 17;
+    </pre>
+
+    <h2>if-then-else statement</h2>
+
+    if-then-else statements allow you to choose between two outcomes and
+    have the program do something different for each choice.
+
+    <pre>
+    var ages = { "alice": 27, "bob": 35 };
+    if ( ages["alice"] > ages["bob"] ) {
+      console.log("Alice is older than bob");
+    } else {
+      console.log("Alice is younger or the same age as bob");
+    }
+    </pre>
+
+
+    <h2>Functions</h2>
+
+    <pre>replaceElement([id], [text])</pre>
+    <p>Replaces the text inside the HTML element with id=[id] with [text]</p>
+
+    <pre>sha256([text])</pre>
+    <p>Calculates the SHA256 hash of [text]</p>
+
+  </div>
+</body>
+</html>

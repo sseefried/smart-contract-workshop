@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="http://seanseefried.com/law-prog/index.css">
+  <script type="text/javascript" src="http://seanseefried.com/law-prog/lib.js"></script>
+  <script type="text/javascript" src="token.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    initialise();
+  });
+  </script>
+</head>
+<body>
+  <div class="max-width-4 mx-auto">
+    <div id="content" class="bg-white sm-px4 px2 py4">
+      <h1>Simple Token Contract</h1>
+
+      <h2>Balances</h2>
+      <div id="balances">
+      <!-- This part is filled in by JavaScript -->
+      </div>
+
+      <br/>
+      <br/>
+
+      <div id="error" class="red">
+        <!-- Error text filled in by JavaScript -->
+      </div>
+
+      <div class="flex">
+        <div class="mr1">
+          <label>Transfer</label>
+          <input type="text" id="amount" placeholder="amount">
+        </div>
+        <div class="mr1">
+          <label>from</label>
+          <input type="text" id="from" placeholder="from user">
+        </div>
+        <div class="mr1">
+          <label>to</label>
+          <input type="text" id="to" placeholder="to user">
+        </div>
+        <div class="mr1">
+          <label>password</label>
+          <input type="password" id="password" placeholder="password">
+        </div>
+        <button id="transfer-btn" class="btn btn-primary">Transfer</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
