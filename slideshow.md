@@ -36,12 +36,17 @@
 
 
 - will not replace lawyers
+
 - will just allow them to automate boring tasks
+
 - short of developing AI, for complex moral judgements computers will probably never be used
+
 - original definition by Nick Szabo meant a contract that was *self-enforcing*.
 
 - We're not going to write a _real_ smart contract today
+
 - just going to do it in JavaScript
+
 - however, the *logic* of the smart contract will be similar
 
 ---
@@ -180,11 +185,11 @@ x = y + 10; // x is now 32
 
 - I'll show you the HTML and then we'll fill in the missing parts of some code
 
-* Go to `http://seanseefried.com/law-prog/token.html`. Then *right-click*
+* Go to [`http://seanseefried.com/law-prog/token.html`](http://seanseefried.com/law-prog/token.html). Then *right-click*
   and "view page source". Then *copy-and-paste* the text into your text editor
   and save the file as `token.html` (perhaps on Desktop).
 
-* Go to `http://seanseefried.com/law-prog/token.js`. This will display as plain
+* Go to [`http://seanseefried.com/law-prog/token.js`](http://seanseefried.com/law-prog/token.js). This will display as plain
   text so no need to right-click. Just *copy-and-paste* the tet into a a new
   text editor window as save file as `token.js` (perhaps on Desktop).
 
@@ -214,7 +219,49 @@ x = y + 10; // x is now 32
 
 You can find a solution at [http://seanseefried.com/law-prog/solutions/token.js](http://seanseefried.com/law-prog/solutions/token.js)
 
+Try to do it yourself first though!
 
+---
+
+# Notes on the DAO hack
+
+Here is the metaphor I heard for DAO hack that I really like.
+Imagine that every time you go to the bank this is the procedure.
+
+1. You ask to withdraw some money
+
+2. The teller goes to the bank's ledger and checks you have enough money.
+
+3. They fetch the money and hand it to you.
+
+4. You say "thank you"
+
+5. The teller goes back to the bank's ledger and updates the balance to
+   reflect your withdrawal.
+
+Let's say that the teller is a real stickler for politeness and will wait until
+you say "thank you".
+
+You could hack this process. **See next slide!**
+
+---
+
+# Notes on the DAO hack
+
+You "hack" the bank by following this set of instructions:
+
+1. You go to the first teller and ask for $500. They check the balance, see
+   you have enough and fetch the $500 but you decide not to say "thank you".
+
+2. You move to another teller in the bank and ask for $500, while the first
+   teller is still waiting to hear "thank you". The second teller checks the
+   ledger which still hasn't been updated, and fetches $500 and hands it to you.
+
+3. Repeat process for all tellers in the bank.
+
+4. As a bonus bit of fun, as you walk out of the bank with your stacks of cash
+   you yell "thank you!" back at them. All the tellers rush to ledger and
+   discover that they have been duped!
 ---
 
 # Want to see a _real_ Ethereum contract?
@@ -222,8 +269,9 @@ You can find a solution at [http://seanseefried.com/law-prog/solutions/token.js]
 * On the following slides you can peruse code for a _real_ Ethereum
   contract. A little more complicated than the JavaScript but not by much!
 
+* In particular check out the `transfer` function. Really not that different!
 
-```
+```JavaScript
 contract MyToken {
     /* Public variables of the token */
     string public standard = 'Token 0.1';
@@ -341,6 +389,11 @@ contract MyToken {
     }
 }
 ```
+
+
+
+
+---
 # Contact details
 
 ## Sean Seefried <sean.seefried@gmail.com>
