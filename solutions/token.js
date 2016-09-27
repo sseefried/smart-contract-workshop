@@ -5,11 +5,6 @@ var password_hashes = {
   'dazza':   "c15592e2c40543c7aa02e2f9570e667eb62fb2c19a569ed96cf9e0847d2c1f21"
 };
 
-// console.log(sha256("alasiforgot"));
-// console.log(sha256("mycatlikestuna"));
-// console.log(sha256("topspin"));
-// console.log(sha256("ilikevb"));
-
 var balances = {
   'alice':   100,
   'bob':     50,
@@ -56,11 +51,6 @@ var transfer = function(from, to, amount, password) {
     return;
   }
 
-  if ( amount < 0 ) {
-    replaceElement("error", `Can't transfer a negative amount!`);
-    return;
-  }
-
   if ( amount > balances[from] ) {
     replaceElement("error", `'${from}' doesn't have that much to transfer`);
     return;
@@ -70,6 +60,12 @@ var transfer = function(from, to, amount, password) {
     replaceElement("error", `Incorrect password for ${from}`);
     return;
   }
+
+  if ( amount < 0 ) {
+    replaceElement("error", `Can't transfer a negative amount!`);
+    return;
+  }
+
 
   balances[to]   += amount;
   balances[from] -= amount;
